@@ -1,0 +1,28 @@
+<!-- home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Food Intake Tracker</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="fats">Fats:</label><br>
+        <input type="number" id="fats" name="fats"><br>
+        <label for="carbs">Carbs:</label><br>
+        <input type="number" id="carbs" name="carbs"><br>
+        <label for="protein">Protein:</label><br>
+        <input type="number" id="protein" name="protein"><br>
+        <button type="submit">Submit</button>
+    </form>
+    {% if calories %}
+    <h2>Calories: {{ calories }}</h2>
+    {% endif %}
+</body>
+</html>

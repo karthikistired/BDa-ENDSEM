@@ -1,0 +1,18 @@
+<!-- intake_details.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intake Details</title>
+</head>
+<body>
+    <h1>All Intake Details</h1>
+    <ul>
+        {% for intake in intakes %}
+        <li>Name: {{ intake.name }}, Fats: {{ intake.fats }}, Carbs: {{ intake.carbs }}, Protein: {{ intake.protein }}, Calories: {{ intake.calories }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
